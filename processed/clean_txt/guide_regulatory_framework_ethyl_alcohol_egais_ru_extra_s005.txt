@@ -1,0 +1,9 @@
+Приказы службы закрепляют административные регламенты, технические и организационные требования к объектам, оборудованию, учёту, формам документов по линии ведомства. Для RAG в проекте уже подготовлены прямые ссылки на официальную публикацию (тот же справочник):
+
+- Приказ от 12.08.2019 № 199 — http://publication.pravo.gov.ru/document/0001202002030031 
+- Приказ от 27.08.2020 № 268 — http://publication.pravo.gov.ru/document/0001202011260025 
+- Приказ от 17.12.2020 № 398 — http://publication.pravo.gov.ru/Document/View/0001202012300150 
+- Приказ от 17.12.2020 № 402 — http://publication.pravo.gov.ru/Document/View/0001202012300168 
+- Приказ от 17.12.2020 № 405 — http://publication.pravo.gov.ru/Document/View/0001202012300114 
+- Приказ от 10.11.2021 № 397 — http://publication.pravo.gov.ru/Document/View/0001202111260031 
+- Приказ от 29.11.2021 № 423 — http://publication.pravo.gov.ru/Document/View/0001202111300116

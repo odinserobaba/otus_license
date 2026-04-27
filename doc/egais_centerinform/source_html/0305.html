@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html xml:lang="ru-RU" lang="ru-RU" class="">
+<head>	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200px, initial-scale=1">
+			<title>Организация ведет декларации в Retail Declaration (есть документы Реализация), но не работает с Фискальным Регистратором</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="егаис, декларирование, алкоголь, фсрар, отчетность" />
+<meta name="description" content="Инструкции и памятки по вопросам связанным с ЕГАИС и Росалкогольрегулированием." />
+<link href="/bitrix/js/ui/design-tokens/dist/ui.design-tokens.css?167579597224720" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/ui/notification/ui.notification.css?16757953782071" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/ui/fonts/opensans/ui.font.opensans.css?16757953772555" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/popup/dist/main.popup.bundle.css?169221899129861" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/rating/main.rating.css?169221893535131" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/components/bitrix/wiki.show/templates/.default/style.css?16390675751875" type="text/css"  rel="stylesheet" />
+<link href="/local/components/custom/dap.region.change/templates/torgi2016/style.css?17734114061223" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/components/custom/point.select/templates/.default/style.css?1773411406947" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/components/custom/dap.head.auth/templates/torgi2016/style.css?17641015281224" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/components/bitrix/menu/torgi2016-side-menu/style.css?1764101528301" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/components/custom/ml.chat/templates/.default/style.css?17641015287712" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles.css?17641015282602" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/template_styles.css?177341140613560" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles/egais.css?17641015282333" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles/egais-header-new.css?17734114065547" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles/egais-footer-new.css?1764101528631" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="https://api-maps.yandex.ru/1.1/_YMaps.css?v=1.1.21-58" type="text/css"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1692219034486439"></script>
+
+<script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+</script>
+<script type="text/javascript">(window.BX||top.BX).message({'RATING_LIKE_REACTION_DEFAULT':'like','RATING_LIKE_POPUP_ALL':'Все #CNT#','RATING_LIKE_TOP_TEXT2_YOU_2_MORE':'#OVERFLOW_START#Вы, #USER_1#, #USER_2##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_YOU_1_MORE':'#OVERFLOW_START#Вы, #USER_1##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_YOU_2':'#OVERFLOW_START#Вы, #USER_1# и #USER_2##OVERFLOW_END#','RATING_LIKE_TOP_TEXT2_YOU_1':'#OVERFLOW_START#Вы и #USER_1##OVERFLOW_END#','RATING_LIKE_TOP_TEXT2_2_MORE':'#OVERFLOW_START##USER_1#, #USER_2##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_1_MORE':'#OVERFLOW_START##USER_1##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_2':'#OVERFLOW_START##USER_1# и #USER_2##OVERFLOW_END#','RATING_LIKE_TOP_TEXT2_1':'#OVERFLOW_START##USER_1##OVERFLOW_END#','RATING_LIKE_EMOTION_LIKE_CALC':'Мне нравится','RATING_LIKE_EMOTION_KISS_CALC':'Восхищаюсь','RATING_LIKE_EMOTION_LAUGH_CALC':'Смеюсь','RATING_LIKE_EMOTION_WONDER_CALC':'Удивляюсь','RATING_LIKE_EMOTION_CRY_CALC':'Печалюсь','RATING_LIKE_EMOTION_ANGRY_CALC':'Злюсь','RATING_LIKE_EMOTION_FACEPALM_CALC':'Разочарован'});(window.BX||top.BX).message({'RATING_LIKE_TOP_TEXT2_YOU_2_MORE':'#OVERFLOW_START#Вы, #USER_1#, #USER_2##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_YOU_1_MORE':'#OVERFLOW_START#Вы, #USER_1##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_YOU_2':'#OVERFLOW_START#Вы, #USER_1# и #USER_2##OVERFLOW_END#','RATING_LIKE_TOP_TEXT2_YOU_1':'#OVERFLOW_START#Вы и #USER_1##OVERFLOW_END#','RATING_LIKE_TOP_TEXT2_YOU_0':'#OVERFLOW_START#Вы#OVERFLOW_END#','RATING_LIKE_TOP_TEXT2_2_MORE':'#OVERFLOW_START##USER_1#, #USER_2##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_1_MORE':'#OVERFLOW_START##USER_1##OVERFLOW_END##MORE_START#и еще #USERS_MORE##MORE_END#','RATING_LIKE_TOP_TEXT2_2':'#OVERFLOW_START##USER_1# и #USER_2##OVERFLOW_END#','RATING_LIKE_TOP_TEXT2_1':'#OVERFLOW_START##USER_1##OVERFLOW_END#','RATING_LIKE_TOP_TEXT3_YOU':'Вы','RATING_LIKE_TOP_TEXT3_1':'#OVERFLOW_START##USER_LIST_BEGIN##OVERFLOW_END#','RATING_LIKE_TOP_TEXT3_2':'#OVERFLOW_START##USER_LIST_BEGIN# и #USER_LIST_END##OVERFLOW_END#','RATING_LIKE_TOP_TEXT3_USERLIST_SEPARATOR':'#USERNAME#, #USERNAME#','RATING_LIKE_POPUP_ALL':'Все #CNT#','RATING_LIKE_EMOTION_LIKE':'Нравится','RATING_LIKE_EMOTION_KISS':'Восхищаюсь','RATING_LIKE_EMOTION_LAUGH':'Смеюсь','RATING_LIKE_EMOTION_WONDER':'Удивляюсь','RATING_LIKE_EMOTION_CRY':'Печалюсь','RATING_LIKE_EMOTION_ANGRY':'Злюсь','RATING_LIKE_EMOTION_FACEPALM':'Разочарован','RATING_LIKE_RESULTS':'Результаты'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','UTF_MODE':'Y','SITE_ID':'s4','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1776755858','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'2c24e20c1196afa526f75227efc1993b'});</script>
+
+
+<script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?163906768810430"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?16540966213701"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.12.4.min.js?167579499597163"></script>
+<script type="text/javascript" src="/bitrix/js/ui/notification/ui.notification.balloon.js?165409634115968"></script>
+<script type="text/javascript" src="/bitrix/js/ui/notification/ui.notification.stack.js?16390676658605"></script>
+<script type="text/javascript" src="/bitrix/js/ui/notification/ui.notification.center.js?16540963415546"></script>
+<script type="text/javascript" src="/bitrix/js/ui/lottie/dist/lottie.bundle.js?1675795972414793"></script>
+<script type="text/javascript" src="/bitrix/js/main/popup/dist/main.popup.bundle.js?1692218952117166"></script>
+<script type="text/javascript" src="/bitrix/js/main/rating/main.rating.js?1692218991320370"></script>
+<script type="text/javascript">
+bxSession.Expand('2c24e20c1196afa526f75227efc1993b.605925759350c2241634a5c138d9ceab8bb51a7d94c3ded7853bede5003595da');
+</script>
+
+
+
+<script type="text/javascript" src="/local/js/ci/popupWindow.js?176410152813967"></script>
+<script type="text/javascript" src="/local/templates/torgi2016/js/script.js?17719429971276"></script>
+<script type="text/javascript" src="/local/components/custom/dap.region.change/templates/torgi2016/script.js?17641015282623"></script>
+<script type="text/javascript" src="/local/js/ci/tools.js?17641015286644"></script>
+<script type="text/javascript" src="/local/components/custom/point.select/templates/.default/script.js?17641015282082"></script>
+<script type="text/javascript" src="/local/components/custom/dap.head.auth/templates/torgi2016/script.js?17641015282540"></script>
+<script type="text/javascript" src="/local/js/jquery.fileDownload.js?176410152819013"></script>
+<script type="text/javascript" src="/local/components/custom/ml.chat/templates/.default/script.js?176410152810900"></script>
+<script type="text/javascript" src="/local/templates/torgi2016/js/egais-header-new.js?17641015281920"></script>
+
+	
+			<script type="text/javascript"> (function ab(){ var request = new XMLHttpRequest(); request.open('GET', "https://scripts.botfaqtor.ru/one/129906", false); request.send(); if(request.status === 200) eval(request.responseText); })();</script>
+	</head>
+
+<body>
+<div class="cookie-popup">
+	<div class="rubber-width">
+		<div class="cookie-popup__container">
+			<div class="cookie-popup__info">
+				<p>Мы используем файлы cookie, чтобы учесть ваши предпочтения и улучшить качество работы, в том числе удобство использования веб-сайта и оказываемых нами услуг. Оставаясь на нашем сайте, вы соглашаетесь с <a href="https://center-inform.ru/personal-data/" target="_blank">Политикой обработки персональных данных</a>. Если вы хотите запретить обработку файлов cookie, отключите cookie в настройках вашего браузера.<br><a href="https://center-inform.ru/confidentiality/" target="_blank">Узнать больше</a></p>
+			</div>
+			<div class="cookie-popup__buttons">
+				<div><a class="ci-filled-button" id="cookieAgreeButton">Закрыть</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="header-fixed-container">
+	<header class="rubber-width">
+		<div class="header-container">
+			<div class="header-container__item">
+				<div id="header-logo-container">
+					<div>
+						<a id="header-logo-home-link" href="/">
+							<img
+								alt="АО ЦентрИнформ"
+								id="header-logo"
+								src="/local/templates/torgi2016/images/header-ci-logo.png"
+							>
+						</a>
+					</div>
+					
+					<div id="header-logo-years">
+						<img
+							alt="АО ЦентрИнформ 30 лет"
+							src="/local/templates/torgi2016/images/30-years.png"
+						>
+					</div>
+				</div>
+				
+				<div id="header-points">
+					<div id="head-region-select-text">
+	<span id="head-region-select-link">
+		Санкт-Петербург	</span>
+	<span id="head-region-select-arrow">▼</span>
+	<span id="HEAD_REGION_SESSID" class="hidden">2c24e20c1196afa526f75227efc1993b</span>
+</div>
+
+<div class="hidden" id="head-region-change-form-data">
+	<div id="head-region-change-form">
+		<h2 class="ci-popup-window-title">Выбор региона</h2>
+
+		<div id="head-region-find-block">
+			<input
+				id="head-region-find"
+				class="ci-text-input"
+				type="text"
+				placeholder="Введите название или номер региона"
+			>
+			<span id="head-region-find-icon"></span>
+		</div>
+		
+		<div id="head-region-alert"></div>
+		
+		<table id="head-region-select-table">
+			<tr>
+				<td class="head-region-select-table-cell">
+					<div
+							class="head-region-select-table-element head-region-select-table-element-selected head-region-select-table-element-popular"
+							data-regionid="4723"
+						>
+							[78] Санкт-Петербург						</div>
+
+						<div
+							class="head-region-select-table-element head-region-select-table-element-popular"
+							data-regionid="4724"
+						>
+							[47] Ленинградская область						</div>
+
+						<div
+							class="head-region-select-table-element head-region-select-table-element-popular"
+							data-regionid="5443"
+						>
+							[77] г. Москва						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5367"
+						>
+							[01] Республика Адыгея (Адыгея)						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5369"
+						>
+							[03] Республика Бурятия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5370"
+						>
+							[04] Республика Алтай						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5371"
+						>
+							[05] Республика Дагестан						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5372"
+						>
+							[06] Республика Ингушетия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5373"
+						>
+							[07] Кабардино-Балкарская Республика						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5374"
+						>
+							[08] Республика Калмыкия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5375"
+						>
+							[09] Карачаево-Черкесская Республика						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5376"
+						>
+							[10] Республика Карелия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5377"
+						>
+							[11] Республика Коми						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5378"
+						>
+							[12] Республика Марий Эл						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5379"
+						>
+							[13] Республика Мордовия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5380"
+						>
+							[14] Республика Саха (Якутия)						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5381"
+						>
+							[15] Республика Северная Осетия - Алания						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5382"
+						>
+							[16] Республика Татарстан						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5383"
+						>
+							[17] Республика Тыва						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5385"
+						>
+							[19] Республика Хакасия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5386"
+						>
+							[20] Чеченская Республика						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5387"
+						>
+							[21] Чувашская Республика - Чувашия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5388"
+						>
+							[22] Алтайский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5389"
+						>
+							[23] Краснодарский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5390"
+						>
+							[24] Красноярский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5391"
+						>
+							[25] Приморский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5392"
+						>
+							[26] Ставропольский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5395"
+						>
+							[29] Архангельская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5397"
+						>
+							[31] Белгородская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5398"
+						>
+							[32] Брянская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5399"
+						>
+							[33] Владимирская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4726"
+						>
+							[34] Волгоградская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4725"
+						>
+							[35] Вологодская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5402"
+						>
+							[36] Воронежская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5403"
+						>
+							[37] Ивановская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5404"
+						>
+							[38] Иркутская область						</div>
+
+													</td>
+							<td class="head-region-select-table-cell">
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5405"
+						>
+							[39] Калининградская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5406"
+						>
+							[40] Калужская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5408"
+						>
+							[42] Кемеровская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5409"
+						>
+							[43] Кировская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5410"
+						>
+							[44] Костромская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5411"
+						>
+							[45] Курганская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5412"
+						>
+							[46] Курская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5414"
+						>
+							[48] Липецкая область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5416"
+						>
+							[50] Московская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5417"
+						>
+							[51] Мурманская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5418"
+						>
+							[52] Нижегородская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5419"
+						>
+							[53] Новгородская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5421"
+						>
+							[55] Омская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5422"
+						>
+							[56] Оренбургская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5423"
+						>
+							[57] Орловская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5424"
+						>
+							[58] Пензенская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5426"
+						>
+							[60] Псковская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5427"
+						>
+							[61] Ростовская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5428"
+						>
+							[62] Рязанская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5429"
+						>
+							[63] Самарская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5430"
+						>
+							[64] Саратовская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5432"
+						>
+							[66] Свердловская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5433"
+						>
+							[67] Смоленская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5434"
+						>
+							[68] Тамбовская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5435"
+						>
+							[69] Тверская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5436"
+						>
+							[70] Томская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5437"
+						>
+							[71] Тульская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5439"
+						>
+							[73] Ульяновская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5440"
+						>
+							[74] Челябинская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5441"
+						>
+							[75] Забайкальский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5442"
+						>
+							[76] Ярославская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="1612050"
+						>
+							[83] Ненецкий автономный округ						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4240766"
+						>
+							[91] Республика Крым						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4240767"
+						>
+							[92] Севастополь						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="9170585"
+						>
+							[93] Донецкая Народная Республика						</div>
+
+										</td>
+			<tr>
+		</table>
+	</div>
+</div>
+
+	<script>
+		$(document).ready(function(){
+			ciPopup.show(
+				{
+					showCloseButton:false,
+					arrowTarget:$('#head-region-select-link'),
+					width:300,
+					height:150,
+					contentSource: $('#head-region-autodetect-confirm-form-data')
+				}
+			);
+		});
+	</script>
+	
+	<div class="hidden" id="head-region-autodetect-confirm-form-data">
+		<div id="head-region-autodetect-confirm-form">
+			<h3 id="head-region-autodetect-header">
+				Ваш регион – Санкт-Петербург?
+			</h3>
+
+			<div id="head-region-autodetect-confirm-buttons-block">
+				<span id="head-region-autodetect-confirm-button-yes" class="ci-filled-button">Да</span>
+				<span id="head-region-autodetect-confirm-button-no" class="ci-filled-button">Выбрать другой регион</span>
+			</div>
+
+			<div class="ci-description-text">
+				От выбранного региона зависит наличие и стоимость подписей, а также дополнительных услуг.
+			</div>
+		</div>
+	</div>
+<div id="head-point-select-link">
+	<div class="head-point-select-link-text">
+		АО «ЦентрИнформ»	</div>
+	<div class="head-point-select-link-text">
+		г. Санкт-Петербург, ул. Комсомола 1-3, литера АС	</div>
+	<div class="head-point-select-link-text ci-bold-text">
+		(812) 740-5405	</div>
+</div>
+
+<span id="HEAD_POINT_SESSID" class="hidden">2c24e20c1196afa526f75227efc1993b</span>
+
+<div class="hidden" id="head-point-select-form-data">
+	<div id="head-point-select-form">
+		<h2 class="ci-popup-window-title">Офисы обслуживания</h2>
+		
+		<div id="head-point-select-alert" class="hidden"></div>
+		
+		<div id="head-point-select-list">
+							<div class="head-point-select-point">
+					<h3
+													data-pointid="4560"
+							class="head-point-select-point-name"
+											>
+						АО «ЦентрИнформ»					</h3>
+					
+					<div class="head-point-select-point-data-string">
+						<span class="ci-description-text">
+							Адрес:
+						</span>
+						г. Санкт-Петербург, ул. Комсомола 1-3, литера АС					</div>
+					
+										
+					<div class="head-point-select-point-data-string">
+						<span class="ci-description-text">
+							Телефон:
+						</span>
+						(812) 740-5405					</div>
+					
+											<div class="head-point-select-point-data-string">
+							<span class="ci-description-text">
+								Email:
+							</span>
+							help@center-inform.ru						</div>
+											<div class="head-point-select-point-data-string">
+							<span class="ci-description-text">
+								Схема проезда:
+							</span>
+							
+							<span
+								class="link head-point-select-map-link"
+								data-pointId="4560"
+							>
+								показать на карте
+							</span>
+						</div>
+						
+						<div id="map-4560-head" class="hidden head-point-select-map-block"></div>
+									</div>
+					</div>
+	</div>
+</div>				</div>
+			</div>
+			<div class="header-container__item">
+				<div id="header-site-title">
+						<span id="site-name">ЕГАИС Декларирование</span>
+				</div>
+				
+				<div id="header-actions">
+					<a class="ci-button" href="/tehpod/">
+						<span id="header-button-help-icon"></span>Задать вопрос
+					</a>
+					
+					<a class="ci-button" href="/offers/">
+						<span id="header-button-call-icon"></span>Заказать звонок
+					</a>
+					<span id="ci-head-auth-links">
+			<a href="/auth.php" class="ci-head-auth-link" id="ci-head-authorize">
+			Войти
+		</a>
+		 /
+		<a href="/reg.php" class="ci-head-auth-link">
+			Зарегистрироваться
+		</a>
+	</span>
+
+<span id="HEAD_AUTH_SESSID" class="hidden">2c24e20c1196afa526f75227efc1993b</span>
+
+<div id="head-authorization-form-data" class="hidden">
+	<form name="head-authorization-form" id="head-authorization-form" method="POST" enctype="multipart/form-data">
+		<h2 class="ci-popup-window-title">Авторизация</h2>
+
+		<div class="head-authorization-form-content">
+			<div id="head-auth-alert">
+				<p class="ci-description-text">
+					Если вы уже имеете учетную запись на сайтах
+					<a href="https://7405405.ru">7405405.ru</a> или
+					<a href="https://egais.center-inform.ru">egais.center-inform.ru</a>,
+					то введите данные для входа и авторизуйтесь.
+				</p>
+				<p class="ci-description-text">
+					Если вы забыли пароль, то его можно
+					<a href="/auth.php?forgot_password=yes">восстановить</a>.
+				</p>
+				<p class="ci-description-text">
+					Если у вас нет учетной записи, вы можете
+					<a href="/reg.php">зарегистрироваться</a>.
+				</p>
+			</div>
+			<div class="head-authorization-form-login-block">
+				<label for="head-user-login">Логин:</label>
+				<input
+					id="head-user-login"
+					class="ci-text-input head-user-login"
+					type="text"
+					name="head-user-login"
+					placeholder="Введите логин или ИНН-КПП"
+					required
+				>
+			</div>
+
+			<div class="head-authorization-form-pass-block">
+				<label for="head-user-pass">Пароль:</label>
+				<input
+					id="head-user-pass"
+					class="ci-text-input head-user-pass"
+					type="password"
+					name="head-user-pass"
+					placeholder="Введите пароль"
+					required
+				>
+			</div>
+		</div>
+
+		<input
+			type="submit"
+			class="head-authorization-submit ci-filled-button"
+			name="head-authorization-submit"
+			value="Войти"
+		>
+	</form>
+</div>				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div id="middle-big-line">
+		<div id="middle-tabs-block" class="rubber-width">
+			<div id="navigation-icons">
+									<div class="navigation-icons__item">
+						<a class="navigation-icons__item-link" id="header-main-page-link" href="/"></a>
+					</div>
+								
+				<div class="navigation-icons__item">
+					<a class="navigation-icons__item-link" id="header-show-search"></a>
+				</div>
+			</div>
+			
+			<div id="navigation-menu">
+				<div class="navigation-menu__item" data-menu="egais">
+					<a class="navigation-menu__item-link">ЕГАИС</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="dap">
+					<a class="navigation-menu__item-link">ДЕКЛАРИРОВАНИЕ</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="markirovka">
+					<a class="navigation-menu__item-link">МАРКИРОВКА</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="help">
+					<a class="navigation-menu__item-link">ПОМОЩЬ</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="personal">
+					<a class="navigation-menu__item-link">ЛИЧНЫЙ КАБИНЕТ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="header-menu">
+		<div class="header-menu-container" data-menu="egais">
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/">
+							О системе ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/utm.php">
+							УТМ для ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/egais-connect.php">
+							Подключение к ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/offers/podpis-dlya-egais.php">
+							Электронная подпись для ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/programmy-dlya-raboty-s-egais.php">
+							Программы для ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/order.php">
+							Заказать подпись
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/additional.php">
+							Заказать ПО и дополнительные услуги
+						</a>
+					</p>
+				</div>
+			</div>
+			
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/egais.png" alt="ЕГАИС">
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="dap">
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/deklarirovanie/">
+							О декларировании алкоголя
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/deklarirovanie/order.php">
+							Заказать подпись для декларирования
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/deklarirovanie/additional.php">
+							Заказать дополнительные услуги
+						</a>
+					</p>
+				</div>
+			</div>
+			
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/dap.png" alt="ДЕКЛАРИРОВАНИЕ">
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="markirovka">
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/markirovka.png" alt="МАРКИРОВКА">
+			</div>
+			
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/markirovka/markirovka-piva.php">
+							Маркировка пива
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="https://markirovka.center-inform.ru/">
+							О маркировке
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/markirovka/master-utm-mk.php">
+							Маркировка для производителей
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="https://markirovka.center-inform.ru/kontur-market-dlya-roznicy.php">
+							Маркировка для розницы
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="https://markirovka.center-inform.ru/requests/">
+							Заказать подпись для маркировки
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="help">
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/help.png" alt="ПОМОЩЬ">
+			</div>
+			
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%9F%D0%9E/">
+							Установка программного обеспечения
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%20%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/">
+							Центр Загрузки
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%95%D0%93%D0%90%D0%98%D0%A1/">
+							ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A4%D0%A1%D0%A0%D0%90%D0%A0/">
+							Отчетность в Росалкогольтабакконтроль
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A4%D0%93%D0%98%D0%A1%20%D0%9C%D0%B5%D1%80%D0%BA%D1%83%D1%80%D0%B8%D0%B9/">
+							ФГИС Меркурий
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A1%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D1%8B%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B5%D0%B9/?redirect=%D0%A1%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D1%8B">
+							Сертификаты
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%9A%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5%20%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D0%B8/">
+							Ключевые инструкции
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/">
+							Основные инструкции
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="personal">
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/personal.png" alt="ЛИЧНЫЙ КАБИНЕТ">
+			</div>
+			
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/orders.php">
+							Заказы
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/support.php">
+							Обращения в техподдержку
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/organization.php">
+							Контактная информация
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/certificates.php">
+							Сертификаты
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/licenses.php">
+							Лицензии
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/documents.php">
+							Закрывающие документы
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/revise.php">
+							Акты сверки
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/organization_list.php">
+							Филиалы
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<form
+		method="get"
+		action="/search/"
+		class="rubber-width"
+	>
+				
+		<div id="header-search">
+			<div id="header-search-icon"></div>
+			
+			<div id="header-search-field">
+				<input
+					id="header-search-input"
+					type="text"
+					value=""
+					placeholder="Искать"
+					name="q"
+				>
+			</div>
+			
+			<div id="header-search-submit-field">
+				<input type="submit" id="header-search-submit" value="Найти">
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+<main id="main-column">
+			<div id="page-title-block">
+			<div id="page-title-block-inner" class="rubber-width">
+				<h1>Организация ведет декларации в Retail Declaration (есть документы Реализация), но не работает с Фискальным Регистратором</h1>
+			</div>
+		</div>
+
+		<div class="rubber-width">
+			<div id="side-menu-block">
+				<nav class="side-menu">
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/Установка%20ПО/" class="side-menu-link">Установка ПО</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/ЕГАИС/" class="side-menu-link">ЕГАИС</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/ФСРАР/" class="side-menu-link">ФСРАР</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/Популярные инструкции/" class="side-menu-link">Популярные инструкции</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/Программное%20обеспечение/" class="side-menu-link">Программное обеспечение</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/Ключевые%20носители/" class="side-menu-link">Ключевые носители</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/Сертификаты" class="side-menu-link">Сертификаты</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/Центр Загрузки/" class="side-menu-link">Центр Загрузки</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/Прочее/" class="side-menu-link">Прочее</a>
+			
+		<a href="https://egais.center-inform.ru/tehpod/faq/ФГИС%20Меркурий/" class="side-menu-link">ФГИС Меркурий</a>
+			
+		<a href="https://markirovka.center-inform.ru/tehpod/faq/" class="side-menu-link">Маркировка</a>
+	</nav>			</div>
+		</div>
+		
+	<div id="main-page-content-wrapper" class="rubber-width" >
+					<div id="main-page-content">
+				
+		
+
+<div id="wiki-post">
+	<div id="wiki-post-content">
+		<div> 
+<h3>Программа Retail Declaration более не поддерживается.</h3>
+ <div><br></div> 
+<h3>Для работы с ЕГАИС рекомендуем использовать <a id="bxid_11352" href="https://egais.center-inform.ru/egais/kontur-market.php">Контур.Маркет</a>.</h3>
+ </div><div><br><p>Если организация ведет декларации в РД (есть документы Реализация), но не работает с ФР ни в РД, ни в другом ПО (чеки по крепкому алкоголю нигде не формирует), <span style="background-color: rgb(251, 251, 251); font-family: Verdana, sans-serif;">выполните следующие шаги:</span></p><p></p> 
+<ol> 
+<li>Проведите инвентаризацию своих фактических остатков в организации. <br><br></li>
+ 
+<li>Перейдите в раздел Движение продукции - Движение продукции и запросите движение продукции в целом по подразделениям и по 1 регистру. Посмотрите, есть ли красные строки. Если есть, то нужно отредактировать документы таким образом, чтобы их не было. <b>Обратите внимание,</b> что редактирование документов может повлечь за собой подачу корректирующих деклараций. <b>Не выбирайте справки А и Б вручную при редактировании документов.<br><br></b></li>
+ 
+<li>Перейдите в раздел Движение продукции - Остатки продукции и проверьте, верно ли указаны остатки продукции в программе. Если остатки неверны, то нужно сделать так, чтобы остатки были верные. Для указания розничной продажи воспользуйтесь <a id="bxid_909651" href="https://egais.center-inform.ru/tehpod/faq/%D0%A2%D1%80%D0%B8+%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%B0+%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F+%D1%80%D0%BE%D0%B7%D0%BD%D0%B8%D1%87%D0%BD%D0%BE%D0%B9+%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B8/">инструкцией</a>.<br>Если у вас есть продукция, которую нужно поставить на баланс воспользуйтесь <a id="bxid_707569" href="https://egais.center-inform.ru/tehpod/faq/%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0+%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8+%D0%BD%D0%B0+%D0%B1%D0%B0%D0%BB%D0%B0%D0%BD%D1%81/">инструкцией</a><br><br></li>
+ 
+<li>Перейдите в Сервис-Обновление БД-recreater2.sql. (Обязательно создайте резервную копию перед обновлением БД по <a href="https://egais.center-inform.ru/tehpod/faq/%D0%A0%D0%B5%D0%B7%D0%B5%D1%80%D0%B2%D0%BD%D0%BE%D0%B5+%D0%BA%D0%BE%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%91%D0%B0%D0%B7%D1%8B+%D0%94%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/" style="font-size: 12.6101px; color: rgb(32, 91, 171); font-family: Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);">инструкции</a><span style="color: rgb(5, 38, 53); font-family: Arial, Helvetica, sans-serif; font-size: 12.6088px; background-color: rgb(255, 255, 255);">). </span><br style="font-size: 12.6101px; color: rgb(5, 38, 53); font-family: Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><font style="font-size: 12.6101px; color: rgb(5, 38, 53); font-family: Arial, Helvetica, sans-serif; background-color: rgb(255, 255, 255);"><span style="font-size: 12.6113px; background-color: rgb(251, 251, 251);">Внимание!</span></font><span style="color: rgb(5, 38, 53); font-family: Arial, Helvetica, sans-serif; font-size: 12.6088px; background-color: rgb(255, 255, 255);"> Обновлять БД нужно в начале рабочего дня, когда документы Реализация еще не создавались в этот день, либо в конце рабочего дня, когда документы Реализация в этот день больше создаваться не будет. <br><br></span></li>
+ 
+<li><font color="#052635"><span style="font-size: 12.6088px;">Перейдите в раздел Движение продукции - Остатки продукции и запросите остатки по 2 регистру. Посмотрите, есть ли красные строки. <br style="font-size: 12.6101px; background-color: rgb(255, 255, 255);"><span style="font-size: 12.6088px; background-color: rgb(255, 255, 255);">Если красные строки есть, то выполните </span><a href="https://egais.center-inform.ru/tehpod/faq/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B5+%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8+%D0%BD%D0%B0+2+%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B5+(%D0%BF%D0%BE%D1%81%D0%BB%D0%B5+%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D0%91%D0%94+%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BC+recreater2.sql)/" style="font-size: 12.6101px; color: rgb(32, 91, 171); background-color: rgb(255, 255, 255);">инструкцию</a><span style="font-size: 12.6088px; background-color: rgb(255, 255, 255);">. </span><br style="font-size: 12.6101px; background-color: rgb(255, 255, 255);"></span></font><br> </li>
+ 
+<li>Сведите остатки по 1 регистру. <br><font><span style="background-color: rgb(251, 251, 251);"><b>Внимание!</b></span></font> Сведение остатков по 1 регистру осуществляется только в том случае, если у вас не формируются новые документы реализации. <br>Если вы не завершили сведение остатков по 1 регистру и новые реализации создались, то прежде чем опять вернуться к сведению остатков по 1 регистру, повторно выполните пункты 2-6. <br>Сведение остатков по 1 регистру выполняется по <a href="https://egais.center-inform.ru/tehpod/faq/%D0%A1%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BA%D0%BE%D0%B2+%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8+%D0%B2+%D0%95%D0%93%D0%90%D0%98%D0%A1+%D0%BF%D0%BE+1+%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D1%83/">инструкции</a>. <br><br></li>
+ 
+<li>Сведите остатки по 2 регистру. <br><b><font><span style="background-color: rgb(251, 251, 251);">Внимание</span></font>!</b> Сведение остатков по 2 регистру осуществляется только в том случае, если у вас не формируются новые документы реализации. <br>Если вы не завершили сведение остатков по 2 регистру и новые реализации создались, то прежде чем опять вернуться к сведению остатков по 2 регистру, повторно выполните пункты 2-7. <br>Сведение остатков по 2 регистру выполняется по <a href="https://egais.center-inform.ru/tehpod/faq/%D0%A1%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5+%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BA%D0%BE%D0%B2+%D0%BF%D0%BE+2+%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D1%83/">инструкции</a>.<br><br></li>
+ 
+<li>Для поддержания остатков в ЕГАИС в актуальном состоянии воспользуйтесь <a href="https://egais.center-inform.ru/tehpod/faq/%D0%9A%D0%B0%D0%BA+%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B8%D0%B2%D0%B0%D1%82%D1%8C+%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BA%D0%B8+%D0%B2+%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC+%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D0%B8/">инструкцией</a>.</li>
+ </ol>
+ <br></div><br>	<div id="wiki_category">
+			<div class="wiki-category-item">
+				<a title="Список всех категорий" class="" href="/tehpod/faq/categories/">Категории</a>			</div>
+						<div style="clear:both"></div>
+		</div>
+			</div>
+</div>
+<br/>
+<script>
+	hideWikiToc();
+	
+	$(document).ready(function() {
+		let categoryBlock = $('#wiki_category');
+		
+		if (categoryBlock.length) {
+			let firstCategoryItem = categoryBlock.find('.wiki-category-item').first();
+			
+			if (firstCategoryItem.length) {
+				let link = firstCategoryItem.find('a');
+				
+				if (link.length && link.attr('href') === '/tehpod/faq/categories/' && link.text().trim() === 'Категории') {
+					firstCategoryItem.empty().append(`Все инструкции располагаются в разделе <a title="Основные инструкции" href="/tehpod/faq/">Основные инструкции</a>`);
+				}
+			}
+		}
+	});
+</script></div>	</div>
+</main>
+
+<div id="page-bottom-dialog">
+	Вы определились с выбором?<br>	
+		
+	<a id="page-bottom-dialog-button" class="ci-filled-button" href="/egais/order.php">Перейти к оформлению заказа</a>
+</div>
+
+<div id="footer-top-line" class="horizontal-line"></div>
+
+	<footer>
+		<nav id="footer-links" class="rubber-width">
+			<div class="footer-collumn">
+				<img src="/local/templates/torgi2016/images/header-ci-logo.png" id="footer-logo" alt="АО ЦентрИнформ">
+			</div>
+							<div class="footer-collumn">
+					<div class="footer-collumn-links">
+						<a href="/egais/how-to-connect/">Порядок заказа</a><br>
+						<a href="/news/">Новости</a><br>
+						<a href="/contacts/">Контакты</a>
+					</div>
+				</div>
+				
+				<div class="footer-collumn">
+					<div class="footer-collumn-links">
+						<strong>Другие проекты:</strong><br>
+													<a href="https://7405405.ru/">Электронная отчетность</a><br>
+													<a href="https://torgi.center-inform.ru/">Электронные подписи</a><br>
+													<a href="https://markirovka.center-inform.ru">Маркировка товаров</a>
+											</div>
+				</div>
+							<div class="footer-collumn">
+				<div class="footer-collumn-links">
+					(812) 7-405-405<br>
+					Адрес центрального офиса:<br>
+					Санкт-Петербург, ул.&nbsp;Комсомола&nbsp;1&#8288;-&#8288;3,&nbsp;лит.&nbsp;АС<br>
+					Сайт предприятия: <a target="_blank" rel="nofollow" href="https://center-inform.ru/" id="main-site-link">center-inform.ru</a><br>
+					<a target="_blank" rel="nofollow" href="https://center-inform.ru/personal-data/">Политика обработки персональных данных АО "ЦентрИнформ"</a>
+				</div>
+			</div>
+		</nav>
+	</footer>
+
+<div id="chat-body">
+	<div id="chat-area">
+		<div id="chat-label">Мы онлайн, напишите нам</div>
+		<div id="chat-circle" class="btn btn-raised">
+			<img src="/local/components/custom/ml.chat/templates/.default/round-help-button.svg" alt="Открыть" width="35">
+		</div>
+	</div>
+	
+	<div class="chat-box">
+		<div class="chat-box-header">
+			<div class="chat-header-text">
+				Служба поддержки<br>
+				<div class="chat-header-second-text">Напишите нам, мы онлайн</div>
+			</div>
+			<div class="chat-header-actions">
+				<span class="chat-box-toggle material-icons"><img src="/local/components/custom/ml.chat/templates/.default/close-button.svg" alt="Закрыть" width="25"></span>
+			</div>
+		</div>
+		<div class="chat-box-body">
+			<div class="chat-box-overlay">
+			</div>
+			<div class="chat-logs">
+			
+			</div><!--chat-log -->
+		</div>
+		<div class="chat-input">
+			<form id="chat-form">
+				<div class="input-area">
+					<textarea id="chat-input" placeholder="Введите Ваш вопрос..."></textarea>
+					<button type="submit" class="chat-submit" id="chat-submit"><span class="material-icons"><img src="/local/components/custom/ml.chat/templates/.default/send-message.svg" alt="Отправить" width="25"></span></button>
+				</div>
+				
+				<div class="actions-area">
+					<div>
+						<label for="chat-file" class="file-label">
+							<img src="/local/components/custom/ml.chat/templates/.default/clip.svg" alt="Прикрепить файл" width="24">
+						</label>
+						<input id="chat-file" name="files[]" type="file" multiple hidden accept=".png, .jpeg, .jpg, .pdf">
+					</div>
+					
+					<div>
+						<span class="file-description"></span>
+					</div>
+				</div>
+				
+				<input type="hidden" name="action" value="message">
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	
+	ym(11241199, "init", {
+		clickmap:true,
+		trackLinks:true,
+		accurateTrackBounce:true,
+		webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/11241199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11368254-5"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	 gtag('config', 'UA-11368254-5');
+</script>
+<script>
+	$(document).ready(function(){
+		$('.side-menu-banner').on('click', function(){
+			ym(11241199, 'reachGoal', 'menu_banner_click');
+		});
+	});
+</script>
+
+</body>
+</html>

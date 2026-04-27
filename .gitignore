@@ -1,0 +1,42 @@
+# Python cache / virtualenv
+.venv/
+__pycache__/
+*.py[cod]
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.tmp
+*.bak
+
+# Local environment files
+.env
+.env.local
+.env.*
+!.env.example
+!.env.final.example
+
+# Runtime and transient artifacts
+processed/answer_cache.sqlite
+processed/embedding_cache.json
+processed/*tmp*
+processed/*.log
+doc/rename_map*.tsv
+*.log
+
+# Local heavy assets
+models/
+chroma_db/
+
+# Build archives
+*.zip
+*.tar
+*.tar.gz

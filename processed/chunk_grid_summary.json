@@ -1,0 +1,1157 @@
+{
+  "questions_files": [
+    "data/test/eval_questions.jsonl",
+    "data/test/eval_questions_extra10.jsonl"
+  ],
+  "questions_total": 30,
+  "top_k": 12,
+  "official_only": true,
+  "grid": [
+    "2200:320",
+    "2800:560",
+    "3200:700",
+    "3800:800"
+  ],
+  "best": {
+    "config": "cs3200_ov700",
+    "chunk_size": 3200,
+    "overlap": 700,
+    "strict_hit_rate": 0.6333,
+    "avg_coverage": 0.9167,
+    "critical_miss_count": 11
+  },
+  "configs": [
+    {
+      "config": "cs3200_ov700",
+      "chunk_size": 3200,
+      "overlap": 700,
+      "questions_total": 30,
+      "strict_hit_rate": 0.6333,
+      "avg_coverage": 0.9167,
+      "critical_miss_count": 11,
+      "avg_source_diversity": 12.0,
+      "avg_chunk_chars_in_topk": 2129.1,
+      "details": [
+        {
+          "id": "q01",
+          "topic": "продление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2149.2
+        },
+        {
+          "id": "q02",
+          "topic": "выездная оценка",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1880.8
+        },
+        {
+          "id": "q03",
+          "topic": "источники средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1903.2
+        },
+        {
+          "id": "q04",
+          "topic": "сроки",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2156.2
+        },
+        {
+          "id": "q05",
+          "topic": "основания отказа",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1839.2
+        },
+        {
+          "id": "q06",
+          "topic": "розница",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2112.8
+        },
+        {
+          "id": "q07",
+          "topic": "егаис",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1697.3
+        },
+        {
+          "id": "q08",
+          "topic": "помещения",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2350.4
+        },
+        {
+          "id": "q09",
+          "topic": "срок действия",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2485.2
+        },
+        {
+          "id": "q10",
+          "topic": "процедура подачи",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2126.5
+        },
+        {
+          "id": "q11",
+          "topic": "мощность оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2531.0
+        },
+        {
+          "id": "q12",
+          "topic": "транспорт учёт",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2173.4
+        },
+        {
+          "id": "q13",
+          "topic": "коммуникации оборудования",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2507.7
+        },
+        {
+          "id": "q14",
+          "topic": "фиксация движения",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2315.9
+        },
+        {
+          "id": "q15",
+          "topic": "перечень оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2398.9
+        },
+        {
+          "id": "q16",
+          "topic": "выписка реестр",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2200.2
+        },
+        {
+          "id": "q17",
+          "topic": "схтп вино",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2031.3
+        },
+        {
+          "id": "q18",
+          "topic": "постановление 648",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1711.7
+        },
+        {
+          "id": "q19",
+          "topic": "99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1801.9
+        },
+        {
+          "id": "q20",
+          "topic": "приостановление лицензии",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2478.8
+        },
+        {
+          "id": "q21",
+          "topic": "переоформление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1869.8
+        },
+        {
+          "id": "q22",
+          "topic": "госпошлина",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2381.8
+        },
+        {
+          "id": "q23",
+          "topic": "канал подачи",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2208.2
+        },
+        {
+          "id": "q24",
+          "topic": "сведения в заявлении",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2425.2
+        },
+        {
+          "id": "q25",
+          "topic": "исключения выездной оценки",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1753.8
+        },
+        {
+          "id": "q26",
+          "topic": "компетенция розницы",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2479.0
+        },
+        {
+          "id": "q27",
+          "topic": "выписка из реестра порядок",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2005.7
+        },
+        {
+          "id": "q28",
+          "topic": "фиксация движения требования",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1976.9
+        },
+        {
+          "id": "q29",
+          "topic": "подтверждение источников средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1896.7
+        },
+        {
+          "id": "q30",
+          "topic": "соотношение 99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2023.9
+        }
+      ]
+    },
+    {
+      "config": "cs3800_ov800",
+      "chunk_size": 3800,
+      "overlap": 800,
+      "questions_total": 30,
+      "strict_hit_rate": 0.6333,
+      "avg_coverage": 0.9167,
+      "critical_miss_count": 11,
+      "avg_source_diversity": 12.0,
+      "avg_chunk_chars_in_topk": 2328.3,
+      "details": [
+        {
+          "id": "q01",
+          "topic": "продление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2291.4
+        },
+        {
+          "id": "q02",
+          "topic": "выездная оценка",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2317.2
+        },
+        {
+          "id": "q03",
+          "topic": "источники средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2235.3
+        },
+        {
+          "id": "q04",
+          "topic": "сроки",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2193.8
+        },
+        {
+          "id": "q05",
+          "topic": "основания отказа",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2484.8
+        },
+        {
+          "id": "q06",
+          "topic": "розница",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2146.0
+        },
+        {
+          "id": "q07",
+          "topic": "егаис",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1939.4
+        },
+        {
+          "id": "q08",
+          "topic": "помещения",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2508.7
+        },
+        {
+          "id": "q09",
+          "topic": "срок действия",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2794.8
+        },
+        {
+          "id": "q10",
+          "topic": "процедура подачи",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2245.8
+        },
+        {
+          "id": "q11",
+          "topic": "мощность оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2882.0
+        },
+        {
+          "id": "q12",
+          "topic": "транспорт учёт",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2306.4
+        },
+        {
+          "id": "q13",
+          "topic": "коммуникации оборудования",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2604.1
+        },
+        {
+          "id": "q14",
+          "topic": "фиксация движения",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2442.6
+        },
+        {
+          "id": "q15",
+          "topic": "перечень оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2630.4
+        },
+        {
+          "id": "q16",
+          "topic": "выписка реестр",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2369.3
+        },
+        {
+          "id": "q17",
+          "topic": "схтп вино",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1868.8
+        },
+        {
+          "id": "q18",
+          "topic": "постановление 648",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1695.8
+        },
+        {
+          "id": "q19",
+          "topic": "99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2177.6
+        },
+        {
+          "id": "q20",
+          "topic": "приостановление лицензии",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2935.6
+        },
+        {
+          "id": "q21",
+          "topic": "переоформление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1955.2
+        },
+        {
+          "id": "q22",
+          "topic": "госпошлина",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2542.8
+        },
+        {
+          "id": "q23",
+          "topic": "канал подачи",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2346.4
+        },
+        {
+          "id": "q24",
+          "topic": "сведения в заявлении",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2336.0
+        },
+        {
+          "id": "q25",
+          "topic": "исключения выездной оценки",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1880.0
+        },
+        {
+          "id": "q26",
+          "topic": "компетенция розницы",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2846.4
+        },
+        {
+          "id": "q27",
+          "topic": "выписка из реестра порядок",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2483.1
+        },
+        {
+          "id": "q28",
+          "topic": "фиксация движения требования",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2197.0
+        },
+        {
+          "id": "q29",
+          "topic": "подтверждение источников средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2128.1
+        },
+        {
+          "id": "q30",
+          "topic": "соотношение 99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2065.2
+        }
+      ]
+    },
+    {
+      "config": "cs2800_ov560",
+      "chunk_size": 2800,
+      "overlap": 560,
+      "questions_total": 30,
+      "strict_hit_rate": 0.6,
+      "avg_coverage": 0.8833,
+      "critical_miss_count": 11,
+      "avg_source_diversity": 12.0,
+      "avg_chunk_chars_in_topk": 1928.0,
+      "details": [
+        {
+          "id": "q01",
+          "topic": "продление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1903.6
+        },
+        {
+          "id": "q02",
+          "topic": "выездная оценка",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1563.9
+        },
+        {
+          "id": "q03",
+          "topic": "источники средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1699.7
+        },
+        {
+          "id": "q04",
+          "topic": "сроки",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1929.0
+        },
+        {
+          "id": "q05",
+          "topic": "основания отказа",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1641.6
+        },
+        {
+          "id": "q06",
+          "topic": "розница",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1956.7
+        },
+        {
+          "id": "q07",
+          "topic": "егаис",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1680.3
+        },
+        {
+          "id": "q08",
+          "topic": "помещения",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2258.7
+        },
+        {
+          "id": "q09",
+          "topic": "срок действия",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2211.1
+        },
+        {
+          "id": "q10",
+          "topic": "процедура подачи",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2130.5
+        },
+        {
+          "id": "q11",
+          "topic": "мощность оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2390.2
+        },
+        {
+          "id": "q12",
+          "topic": "транспорт учёт",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1820.6
+        },
+        {
+          "id": "q13",
+          "topic": "коммуникации оборудования",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2335.1
+        },
+        {
+          "id": "q14",
+          "topic": "фиксация движения",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2124.3
+        },
+        {
+          "id": "q15",
+          "topic": "перечень оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2445.8
+        },
+        {
+          "id": "q16",
+          "topic": "выписка реестр",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1548.2
+        },
+        {
+          "id": "q17",
+          "topic": "схтп вино",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1756.4
+        },
+        {
+          "id": "q18",
+          "topic": "постановление 648",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1528.4
+        },
+        {
+          "id": "q19",
+          "topic": "99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1669.1
+        },
+        {
+          "id": "q20",
+          "topic": "приостановление лицензии",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2486.8
+        },
+        {
+          "id": "q21",
+          "topic": "переоформление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1727.0
+        },
+        {
+          "id": "q22",
+          "topic": "госпошлина",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2068.7
+        },
+        {
+          "id": "q23",
+          "topic": "канал подачи",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1991.6
+        },
+        {
+          "id": "q24",
+          "topic": "сведения в заявлении",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1935.8
+        },
+        {
+          "id": "q25",
+          "topic": "исключения выездной оценки",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1772.0
+        },
+        {
+          "id": "q26",
+          "topic": "компетенция розницы",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2259.8
+        },
+        {
+          "id": "q27",
+          "topic": "выписка из реестра порядок",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1812.2
+        },
+        {
+          "id": "q28",
+          "topic": "фиксация движения требования",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1834.8
+        },
+        {
+          "id": "q29",
+          "topic": "подтверждение источников средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1616.4
+        },
+        {
+          "id": "q30",
+          "topic": "соотношение 99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1740.3
+        }
+      ]
+    },
+    {
+      "config": "cs2200_ov320",
+      "chunk_size": 2200,
+      "overlap": 320,
+      "questions_total": 30,
+      "strict_hit_rate": 0.5333,
+      "avg_coverage": 0.8833,
+      "critical_miss_count": 13,
+      "avg_source_diversity": 12.0,
+      "avg_chunk_chars_in_topk": 1530.1,
+      "details": [
+        {
+          "id": "q01",
+          "topic": "продление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1676.2
+        },
+        {
+          "id": "q02",
+          "topic": "выездная оценка",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1407.8
+        },
+        {
+          "id": "q03",
+          "topic": "источники средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1210.6
+        },
+        {
+          "id": "q04",
+          "topic": "сроки",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1518.9
+        },
+        {
+          "id": "q05",
+          "topic": "основания отказа",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1341.9
+        },
+        {
+          "id": "q06",
+          "topic": "розница",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1598.6
+        },
+        {
+          "id": "q07",
+          "topic": "егаис",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1345.0
+        },
+        {
+          "id": "q08",
+          "topic": "помещения",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1798.5
+        },
+        {
+          "id": "q09",
+          "topic": "срок действия",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1630.8
+        },
+        {
+          "id": "q10",
+          "topic": "процедура подачи",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1767.7
+        },
+        {
+          "id": "q11",
+          "topic": "мощность оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1531.2
+        },
+        {
+          "id": "q12",
+          "topic": "транспорт учёт",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1696.8
+        },
+        {
+          "id": "q13",
+          "topic": "коммуникации оборудования",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1615.3
+        },
+        {
+          "id": "q14",
+          "topic": "фиксация движения",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1363.4
+        },
+        {
+          "id": "q15",
+          "topic": "перечень оборудования",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1584.6
+        },
+        {
+          "id": "q16",
+          "topic": "выписка реестр",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1458.4
+        },
+        {
+          "id": "q17",
+          "topic": "схтп вино",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1488.7
+        },
+        {
+          "id": "q18",
+          "topic": "постановление 648",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1274.4
+        },
+        {
+          "id": "q19",
+          "topic": "99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1309.2
+        },
+        {
+          "id": "q20",
+          "topic": "приостановление лицензии",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 2002.2
+        },
+        {
+          "id": "q21",
+          "topic": "переоформление лицензии",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1487.8
+        },
+        {
+          "id": "q22",
+          "topic": "госпошлина",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1600.0
+        },
+        {
+          "id": "q23",
+          "topic": "канал подачи",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1464.2
+        },
+        {
+          "id": "q24",
+          "topic": "сведения в заявлении",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1559.0
+        },
+        {
+          "id": "q25",
+          "topic": "исключения выездной оценки",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1429.1
+        },
+        {
+          "id": "q26",
+          "topic": "компетенция розницы",
+          "strict_hit": false,
+          "coverage": 0.5,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1878.4
+        },
+        {
+          "id": "q27",
+          "topic": "выписка из реестра порядок",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1509.9
+        },
+        {
+          "id": "q28",
+          "topic": "фиксация движения требования",
+          "strict_hit": false,
+          "coverage": 1.0,
+          "critical_miss": true,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1325.6
+        },
+        {
+          "id": "q29",
+          "topic": "подтверждение источников средств",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1460.2
+        },
+        {
+          "id": "q30",
+          "topic": "соотношение 99-ФЗ и 171-ФЗ",
+          "strict_hit": true,
+          "coverage": 1.0,
+          "critical_miss": false,
+          "source_diversity": 12,
+          "avg_chunk_chars": 1569.0
+        }
+      ]
+    }
+  ]
+}

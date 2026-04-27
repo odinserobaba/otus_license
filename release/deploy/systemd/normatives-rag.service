@@ -1,0 +1,17 @@
+[Unit]
+Description=Normatives RAG Gradio Service
+After=network.target
+
+[Service]
+Type=simple
+# IMPORTANT: replace ubuntu with your deploy user if needed.
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/normatives
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/normatives/release/run_final_web.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

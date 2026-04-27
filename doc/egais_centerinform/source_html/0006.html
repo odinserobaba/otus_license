@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html xml:lang="ru-RU" lang="ru-RU" class="">
+<head>	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1200px, initial-scale=1">
+			<title>Подключение к ЕГАИС</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content=", ЦентрИнформ, АО ЦентрИнформ" />
+<meta name="description" content="Подробное пошаговое описание порядка подключения оптовиков и розничных магазинов к ЕГАИС" />
+<link href="/bitrix/js/ui/design-tokens/dist/ui.design-tokens.css?167579597224720" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/ui/notification/ui.notification.css?16757953782071" type="text/css"  rel="stylesheet" />
+<link href="/local/components/custom/dap.region.change/templates/torgi2016/style.css?17734114061223" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/components/custom/point.select/templates/.default/style.css?1773411406947" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/components/custom/dap.head.auth/templates/torgi2016/style.css?17641015281224" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/components/bitrix/menu/torgi2016-side-menu/style.css?1764101528301" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/components/custom/ml.chat/templates/.default/style.css?17641015287712" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles.css?17641015282602" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/template_styles.css?177341140613560" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles/egais.css?17641015282333" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles/egais-header-new.css?17734114065547" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/local/templates/torgi2016/styles/egais-footer-new.css?1764101528631" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="https://api-maps.yandex.ru/1.1/_YMaps.css?v=1.1.21-58" type="text/css"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.js?1692219034486439"></script>
+
+<script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','UTF_MODE':'Y','SITE_ID':'s4','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1776756944','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'b1e747504d36c0e4de5a148b8da33e40'});</script>
+
+
+<script type="text/javascript" src="/bitrix/js/main/core/core_ls.js?163906768810430"></script>
+<script type="text/javascript" src="/bitrix/js/main/session.js?16540966213701"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.12.4.min.js?167579499597163"></script>
+<script type="text/javascript" src="/bitrix/js/ui/notification/ui.notification.balloon.js?165409634115968"></script>
+<script type="text/javascript" src="/bitrix/js/ui/notification/ui.notification.stack.js?16390676658605"></script>
+<script type="text/javascript" src="/bitrix/js/ui/notification/ui.notification.center.js?16540963415546"></script>
+<script type="text/javascript">
+bxSession.Expand('b1e747504d36c0e4de5a148b8da33e40.47a2c6837a3a67618325bac50ec6f956878438de571614f82fa79220d8dc832a');
+</script>
+
+
+
+<script type="text/javascript" src="/local/js/ci/popupWindow.js?176410152813967"></script>
+<script type="text/javascript" src="/local/templates/torgi2016/js/script.js?17719429971276"></script>
+<script type="text/javascript" src="/local/components/custom/dap.region.change/templates/torgi2016/script.js?17641015282623"></script>
+<script type="text/javascript" src="/local/js/ci/tools.js?17641015286644"></script>
+<script type="text/javascript" src="/local/components/custom/point.select/templates/.default/script.js?17641015282082"></script>
+<script type="text/javascript" src="/local/components/custom/dap.head.auth/templates/torgi2016/script.js?17641015282540"></script>
+<script type="text/javascript" src="/local/js/jquery.fileDownload.js?176410152819013"></script>
+<script type="text/javascript" src="/local/components/custom/ml.chat/templates/.default/script.js?176410152810900"></script>
+<script type="text/javascript" src="/local/templates/torgi2016/js/egais-header-new.js?17641015281920"></script>
+
+	
+			<script type="text/javascript"> (function ab(){ var request = new XMLHttpRequest(); request.open('GET', "https://scripts.botfaqtor.ru/one/129906", false); request.send(); if(request.status === 200) eval(request.responseText); })();</script>
+	</head>
+
+<body>
+<div class="cookie-popup">
+	<div class="rubber-width">
+		<div class="cookie-popup__container">
+			<div class="cookie-popup__info">
+				<p>Мы используем файлы cookie, чтобы учесть ваши предпочтения и улучшить качество работы, в том числе удобство использования веб-сайта и оказываемых нами услуг. Оставаясь на нашем сайте, вы соглашаетесь с <a href="https://center-inform.ru/personal-data/" target="_blank">Политикой обработки персональных данных</a>. Если вы хотите запретить обработку файлов cookie, отключите cookie в настройках вашего браузера.<br><a href="https://center-inform.ru/confidentiality/" target="_blank">Узнать больше</a></p>
+			</div>
+			<div class="cookie-popup__buttons">
+				<div><a class="ci-filled-button" id="cookieAgreeButton">Закрыть</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="header-fixed-container">
+	<header class="rubber-width">
+		<div class="header-container">
+			<div class="header-container__item">
+				<div id="header-logo-container">
+					<div>
+						<a id="header-logo-home-link" href="/">
+							<img
+								alt="АО ЦентрИнформ"
+								id="header-logo"
+								src="/local/templates/torgi2016/images/header-ci-logo.png"
+							>
+						</a>
+					</div>
+					
+					<div id="header-logo-years">
+						<img
+							alt="АО ЦентрИнформ 30 лет"
+							src="/local/templates/torgi2016/images/30-years.png"
+						>
+					</div>
+				</div>
+				
+				<div id="header-points">
+					<div id="head-region-select-text">
+	<span id="head-region-select-link">
+		Санкт-Петербург	</span>
+	<span id="head-region-select-arrow">▼</span>
+	<span id="HEAD_REGION_SESSID" class="hidden">b1e747504d36c0e4de5a148b8da33e40</span>
+</div>
+
+<div class="hidden" id="head-region-change-form-data">
+	<div id="head-region-change-form">
+		<h2 class="ci-popup-window-title">Выбор региона</h2>
+
+		<div id="head-region-find-block">
+			<input
+				id="head-region-find"
+				class="ci-text-input"
+				type="text"
+				placeholder="Введите название или номер региона"
+			>
+			<span id="head-region-find-icon"></span>
+		</div>
+		
+		<div id="head-region-alert"></div>
+		
+		<table id="head-region-select-table">
+			<tr>
+				<td class="head-region-select-table-cell">
+					<div
+							class="head-region-select-table-element head-region-select-table-element-selected head-region-select-table-element-popular"
+							data-regionid="4723"
+						>
+							[78] Санкт-Петербург						</div>
+
+						<div
+							class="head-region-select-table-element head-region-select-table-element-popular"
+							data-regionid="4724"
+						>
+							[47] Ленинградская область						</div>
+
+						<div
+							class="head-region-select-table-element head-region-select-table-element-popular"
+							data-regionid="5443"
+						>
+							[77] г. Москва						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5367"
+						>
+							[01] Республика Адыгея (Адыгея)						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5369"
+						>
+							[03] Республика Бурятия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5370"
+						>
+							[04] Республика Алтай						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5371"
+						>
+							[05] Республика Дагестан						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5372"
+						>
+							[06] Республика Ингушетия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5373"
+						>
+							[07] Кабардино-Балкарская Республика						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5374"
+						>
+							[08] Республика Калмыкия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5375"
+						>
+							[09] Карачаево-Черкесская Республика						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5376"
+						>
+							[10] Республика Карелия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5377"
+						>
+							[11] Республика Коми						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5378"
+						>
+							[12] Республика Марий Эл						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5379"
+						>
+							[13] Республика Мордовия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5380"
+						>
+							[14] Республика Саха (Якутия)						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5381"
+						>
+							[15] Республика Северная Осетия - Алания						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5382"
+						>
+							[16] Республика Татарстан						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5383"
+						>
+							[17] Республика Тыва						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5385"
+						>
+							[19] Республика Хакасия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5386"
+						>
+							[20] Чеченская Республика						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5387"
+						>
+							[21] Чувашская Республика - Чувашия						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5388"
+						>
+							[22] Алтайский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5389"
+						>
+							[23] Краснодарский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5390"
+						>
+							[24] Красноярский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5391"
+						>
+							[25] Приморский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5392"
+						>
+							[26] Ставропольский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5395"
+						>
+							[29] Архангельская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5397"
+						>
+							[31] Белгородская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5398"
+						>
+							[32] Брянская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5399"
+						>
+							[33] Владимирская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4726"
+						>
+							[34] Волгоградская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4725"
+						>
+							[35] Вологодская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5402"
+						>
+							[36] Воронежская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5403"
+						>
+							[37] Ивановская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5404"
+						>
+							[38] Иркутская область						</div>
+
+													</td>
+							<td class="head-region-select-table-cell">
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5405"
+						>
+							[39] Калининградская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5406"
+						>
+							[40] Калужская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5408"
+						>
+							[42] Кемеровская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5409"
+						>
+							[43] Кировская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5410"
+						>
+							[44] Костромская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5411"
+						>
+							[45] Курганская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5412"
+						>
+							[46] Курская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5414"
+						>
+							[48] Липецкая область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5416"
+						>
+							[50] Московская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5417"
+						>
+							[51] Мурманская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5418"
+						>
+							[52] Нижегородская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5419"
+						>
+							[53] Новгородская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5421"
+						>
+							[55] Омская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5422"
+						>
+							[56] Оренбургская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5423"
+						>
+							[57] Орловская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5424"
+						>
+							[58] Пензенская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5426"
+						>
+							[60] Псковская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5427"
+						>
+							[61] Ростовская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5428"
+						>
+							[62] Рязанская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5429"
+						>
+							[63] Самарская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5430"
+						>
+							[64] Саратовская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5432"
+						>
+							[66] Свердловская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5433"
+						>
+							[67] Смоленская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5434"
+						>
+							[68] Тамбовская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5435"
+						>
+							[69] Тверская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5436"
+						>
+							[70] Томская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5437"
+						>
+							[71] Тульская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5439"
+						>
+							[73] Ульяновская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5440"
+						>
+							[74] Челябинская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5441"
+						>
+							[75] Забайкальский край						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="5442"
+						>
+							[76] Ярославская область						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="1612050"
+						>
+							[83] Ненецкий автономный округ						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4240766"
+						>
+							[91] Республика Крым						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="4240767"
+						>
+							[92] Севастополь						</div>
+
+						<div
+							class="head-region-select-table-element"
+							data-regionid="9170585"
+						>
+							[93] Донецкая Народная Республика						</div>
+
+										</td>
+			<tr>
+		</table>
+	</div>
+</div>
+
+	<script>
+		$(document).ready(function(){
+			ciPopup.show(
+				{
+					showCloseButton:false,
+					arrowTarget:$('#head-region-select-link'),
+					width:300,
+					height:150,
+					contentSource: $('#head-region-autodetect-confirm-form-data')
+				}
+			);
+		});
+	</script>
+	
+	<div class="hidden" id="head-region-autodetect-confirm-form-data">
+		<div id="head-region-autodetect-confirm-form">
+			<h3 id="head-region-autodetect-header">
+				Ваш регион – Санкт-Петербург?
+			</h3>
+
+			<div id="head-region-autodetect-confirm-buttons-block">
+				<span id="head-region-autodetect-confirm-button-yes" class="ci-filled-button">Да</span>
+				<span id="head-region-autodetect-confirm-button-no" class="ci-filled-button">Выбрать другой регион</span>
+			</div>
+
+			<div class="ci-description-text">
+				От выбранного региона зависит наличие и стоимость подписей, а также дополнительных услуг.
+			</div>
+		</div>
+	</div>
+<div id="head-point-select-link">
+	<div class="head-point-select-link-text">
+		АО «ЦентрИнформ»	</div>
+	<div class="head-point-select-link-text">
+		г. Санкт-Петербург, ул. Комсомола 1-3, литера АС	</div>
+	<div class="head-point-select-link-text ci-bold-text">
+		(812) 740-5405	</div>
+</div>
+
+<span id="HEAD_POINT_SESSID" class="hidden">b1e747504d36c0e4de5a148b8da33e40</span>
+
+<div class="hidden" id="head-point-select-form-data">
+	<div id="head-point-select-form">
+		<h2 class="ci-popup-window-title">Офисы обслуживания</h2>
+		
+		<div id="head-point-select-alert" class="hidden"></div>
+		
+		<div id="head-point-select-list">
+							<div class="head-point-select-point">
+					<h3
+													data-pointid="4560"
+							class="head-point-select-point-name"
+											>
+						АО «ЦентрИнформ»					</h3>
+					
+					<div class="head-point-select-point-data-string">
+						<span class="ci-description-text">
+							Адрес:
+						</span>
+						г. Санкт-Петербург, ул. Комсомола 1-3, литера АС					</div>
+					
+										
+					<div class="head-point-select-point-data-string">
+						<span class="ci-description-text">
+							Телефон:
+						</span>
+						(812) 740-5405					</div>
+					
+											<div class="head-point-select-point-data-string">
+							<span class="ci-description-text">
+								Email:
+							</span>
+							help@center-inform.ru						</div>
+											<div class="head-point-select-point-data-string">
+							<span class="ci-description-text">
+								Схема проезда:
+							</span>
+							
+							<span
+								class="link head-point-select-map-link"
+								data-pointId="4560"
+							>
+								показать на карте
+							</span>
+						</div>
+						
+						<div id="map-4560-head" class="hidden head-point-select-map-block"></div>
+									</div>
+					</div>
+	</div>
+</div>				</div>
+			</div>
+			<div class="header-container__item">
+				<div id="header-site-title">
+						<span id="site-name">ЕГАИС Декларирование</span>
+				</div>
+				
+				<div id="header-actions">
+					<a class="ci-button" href="/tehpod/">
+						<span id="header-button-help-icon"></span>Задать вопрос
+					</a>
+					
+					<a class="ci-button" href="/offers/">
+						<span id="header-button-call-icon"></span>Заказать звонок
+					</a>
+					<span id="ci-head-auth-links">
+			<a href="/auth.php" class="ci-head-auth-link" id="ci-head-authorize">
+			Войти
+		</a>
+		 /
+		<a href="/reg.php" class="ci-head-auth-link">
+			Зарегистрироваться
+		</a>
+	</span>
+
+<span id="HEAD_AUTH_SESSID" class="hidden">b1e747504d36c0e4de5a148b8da33e40</span>
+
+<div id="head-authorization-form-data" class="hidden">
+	<form name="head-authorization-form" id="head-authorization-form" method="POST" enctype="multipart/form-data">
+		<h2 class="ci-popup-window-title">Авторизация</h2>
+
+		<div class="head-authorization-form-content">
+			<div id="head-auth-alert">
+				<p class="ci-description-text">
+					Если вы уже имеете учетную запись на сайтах
+					<a href="https://7405405.ru">7405405.ru</a> или
+					<a href="https://egais.center-inform.ru">egais.center-inform.ru</a>,
+					то введите данные для входа и авторизуйтесь.
+				</p>
+				<p class="ci-description-text">
+					Если вы забыли пароль, то его можно
+					<a href="/auth.php?forgot_password=yes">восстановить</a>.
+				</p>
+				<p class="ci-description-text">
+					Если у вас нет учетной записи, вы можете
+					<a href="/reg.php">зарегистрироваться</a>.
+				</p>
+			</div>
+			<div class="head-authorization-form-login-block">
+				<label for="head-user-login">Логин:</label>
+				<input
+					id="head-user-login"
+					class="ci-text-input head-user-login"
+					type="text"
+					name="head-user-login"
+					placeholder="Введите логин или ИНН-КПП"
+					required
+				>
+			</div>
+
+			<div class="head-authorization-form-pass-block">
+				<label for="head-user-pass">Пароль:</label>
+				<input
+					id="head-user-pass"
+					class="ci-text-input head-user-pass"
+					type="password"
+					name="head-user-pass"
+					placeholder="Введите пароль"
+					required
+				>
+			</div>
+		</div>
+
+		<input
+			type="submit"
+			class="head-authorization-submit ci-filled-button"
+			name="head-authorization-submit"
+			value="Войти"
+		>
+	</form>
+</div>				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div id="middle-big-line">
+		<div id="middle-tabs-block" class="rubber-width">
+			<div id="navigation-icons">
+									<div class="navigation-icons__item">
+						<a class="navigation-icons__item-link" id="header-main-page-link" href="/"></a>
+					</div>
+								
+				<div class="navigation-icons__item">
+					<a class="navigation-icons__item-link" id="header-show-search"></a>
+				</div>
+			</div>
+			
+			<div id="navigation-menu">
+				<div class="navigation-menu__item" data-menu="egais">
+					<a class="navigation-menu__item-link">ЕГАИС</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="dap">
+					<a class="navigation-menu__item-link">ДЕКЛАРИРОВАНИЕ</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="markirovka">
+					<a class="navigation-menu__item-link">МАРКИРОВКА</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="help">
+					<a class="navigation-menu__item-link">ПОМОЩЬ</a>
+				</div>
+				
+				<div class="navigation-menu__item" data-menu="personal">
+					<a class="navigation-menu__item-link">ЛИЧНЫЙ КАБИНЕТ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="header-menu">
+		<div class="header-menu-container" data-menu="egais">
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/">
+							О системе ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/utm.php">
+							УТМ для ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/egais-connect.php">
+							Подключение к ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/offers/podpis-dlya-egais.php">
+							Электронная подпись для ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/programmy-dlya-raboty-s-egais.php">
+							Программы для ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/order.php">
+							Заказать подпись
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/egais/additional.php">
+							Заказать ПО и дополнительные услуги
+						</a>
+					</p>
+				</div>
+			</div>
+			
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/egais.png" alt="ЕГАИС">
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="dap">
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/deklarirovanie/">
+							О декларировании алкоголя
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/deklarirovanie/order.php">
+							Заказать подпись для декларирования
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/deklarirovanie/additional.php">
+							Заказать дополнительные услуги
+						</a>
+					</p>
+				</div>
+			</div>
+			
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/dap.png" alt="ДЕКЛАРИРОВАНИЕ">
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="markirovka">
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/markirovka.png" alt="МАРКИРОВКА">
+			</div>
+			
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/markirovka/markirovka-piva.php">
+							Маркировка пива
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="https://markirovka.center-inform.ru/">
+							О маркировке
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/markirovka/master-utm-mk.php">
+							Маркировка для производителей
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="https://markirovka.center-inform.ru/kontur-market-dlya-roznicy.php">
+							Маркировка для розницы
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="https://markirovka.center-inform.ru/requests/">
+							Заказать подпись для маркировки
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="help">
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/help.png" alt="ПОМОЩЬ">
+			</div>
+			
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%9F%D0%9E/">
+							Установка программного обеспечения
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A6%D0%B5%D0%BD%D1%82%D1%80%20%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8/">
+							Центр Загрузки
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%95%D0%93%D0%90%D0%98%D0%A1/">
+							ЕГАИС
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A4%D0%A1%D0%A0%D0%90%D0%A0/">
+							Отчетность в Росалкогольтабакконтроль
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A4%D0%93%D0%98%D0%A1%20%D0%9C%D0%B5%D1%80%D0%BA%D1%83%D1%80%D0%B8%D0%B9/">
+							ФГИС Меркурий
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%A1%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D1%8B%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B5%D0%B9/?redirect=%D0%A1%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%D1%8B">
+							Сертификаты
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/%D0%9A%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D1%8B%D0%B5%20%D0%BD%D0%BE%D1%81%D0%B8%D1%82%D0%B5%D0%BB%D0%B8/">
+							Ключевые инструкции
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/tehpod/faq/">
+							Основные инструкции
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="header-menu-container" data-menu="personal">
+			<div class="header-menu__icon">
+				<img src="/local/templates/torgi2016/images/egais/personal.png" alt="ЛИЧНЫЙ КАБИНЕТ">
+			</div>
+			
+			<div class="header-menu__links">
+				<div class="header-menu__links-item">
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/orders.php">
+							Заказы
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/support.php">
+							Обращения в техподдержку
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/organization.php">
+							Контактная информация
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/certificates.php">
+							Сертификаты
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/licenses.php">
+							Лицензии
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/documents.php">
+							Закрывающие документы
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/revise.php">
+							Акты сверки
+						</a>
+					</p>
+					
+					<p class="header-menu-link__text">
+						<a class="header-menu-link" href="/requests/personal/organization_list.php">
+							Филиалы
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<form
+		method="get"
+		action="/search/"
+		class="rubber-width"
+	>
+				
+		<div id="header-search">
+			<div id="header-search-icon"></div>
+			
+			<div id="header-search-field">
+				<input
+					id="header-search-input"
+					type="text"
+					value=""
+					placeholder="Искать"
+					name="q"
+				>
+			</div>
+			
+			<div id="header-search-submit-field">
+				<input type="submit" id="header-search-submit" value="Найти">
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+<main id="main-column">
+			<div id="page-title-block">
+			<div id="page-title-block-inner" class="rubber-width">
+				<h1>Подключение к ЕГАИС</h1>
+			</div>
+		</div>
+
+		<div class="rubber-width">
+			<div id="side-menu-block">
+				<nav class="side-menu">
+			
+		<a href="/egais/order.php" class="side-menu-link">Заказать сертификат</a>
+			
+		<a href="/egais/additional.php" class="side-menu-link">Программное обеспечение</a>
+			
+		<a href="/egais/additional.php" class="side-menu-link">Дополнительные услуги</a>
+			
+		<a href="/egais/how-to-connect/" class="side-menu-link">Порядок заказа</a>
+			
+		<a href="/egais/index.php" class="side-menu-link">О системе ЕГАИС</a>
+			
+		<a href="/egais/egais-connect.php" class="side-menu-link side-menu-link-selected">Как подключиться?</a>
+			
+		<a href="/egais/utm.php" class="side-menu-link">УТМ для ЕГАИС</a>
+			
+		<a href="/egais/zakonodatelstvo/" class="side-menu-link">Законодательство</a>
+	</nav>			</div>
+		</div>
+		
+	<div id="main-page-content-wrapper" class="rubber-width" >
+					<div id="main-page-content">
+				
+		
+<style>
+	.ci-connection-order-block{
+		background: url("/upload/pics/dap/por_back.png") 14px top no-repeat #e0e5e7;
+		height:40px;
+		padding: 7px 14px 14px 54px;
+		position: relative;
+		line-height: 26px;
+		margin-bottom:14px;
+	}
+	
+	.ci-connection-order-number{
+		position:absolute;
+		top:26px;
+		left:24px;
+		line-height: 1em;
+		color:#b3bbbe;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	
+	.ci-connection-order-block-hidden{
+		display: none;
+		color:#80878a;
+		margin: 10px 0px 30px 56px;
+	}
+</style>
+
+<h2 class="ci-header-with-background ci-headers">Порядок подключения</h2>
+
+<div class="ci-connection-order-block">
+	<div class="ci-connection-order-number">1</div>
+	Приобрести сертификат квалифицированной электронной подписи ГОСТ (КЭП) для ЕГАИС и специальный носитель, оформив заказ на сайте egais.center-inform.ru
+	<a class="toggle-head" id="ci-show-hidden-1" href="#ci-hidden-1-desc">Подробнее</a>
+</div>
+
+<div class="ci-connection-order-block-hidden" id="ci-show-hidden-1Info">
+	<span class="ci-bold-text">Как заказать специальный носитель и сертификат КЭП для подключения к ЕГАИС?</span><br>
+	
+	<p>Квалифицированная электронная подпись используется для подписания файлов, передаваемых в систему ЕГАИС: товарно-транспортных накладных, актов, чеков. Сертификат изготавливается и выдается на уполномоченное лицо организации.</p>
+	
+	<p>Сертификат КЭП записывается на аппаратный крипто-ключ (Jacarata SE или Рутокен ЭЦП 2.0) - сертифицированный ключевой носитель, специальное usb-устройство, предназначенное для создания, безопасного хранения и использования ключей КЭП. Необходимое количество сертификатов КЭП определяется количеством обособленных подразделений организации, осуществляющей реализацию алкогольной продукции, включая пиво и пивные напитки. На каждое обособленное подразделение, имеющее уникальную связку ИНН-КПП, заказывается отдельный сертификат КЭП. Индивидуальным предпринимателям, реализующим пиво и пивные напитки, достаточно заказать один сертификат КЭП.</p>
+	
+	<div class="main-button-block" style="position:relative; margin-top: 15px;">
+		<a href="https://egais.center-inform.ru/egais/how-to-connect/">Порядок заказа</a>
+		<a href="https://egais.center-inform.ru/egais/order.php" id="button-to-order-egais" class="ci-button main-button-to-order">Оформить заказ</a>
+	</div>
+</div>
+
+<div class="ci-connection-order-block" id="#ci-hidden-3-desc">
+	<div class="ci-connection-order-number">2</div>
+	Получить на сайте <a rel="nofollow" href="http://egais.ru">egais.ru</a> сертификат для установки защищенного соединения с ЕГАИС (RSA-ключ) <a class="toggle-head" id="ci-show-hidden-3" href="#ci-hidden-3-desc">Подробнее</a>
+</div>
+
+<div class="ci-connection-order-block-hidden" id="ci-show-hidden-3Info">
+	<div style="margin-bottom: 15px;"><span class="ci-bold-text">Данный сертификат выпускается бесплатно, он необходим для организации безопасного подключения к ЕГАИС и идентификации организации в системе.</span></div>
+
+	<span class="ci-bold-text">Чтобы изготовить RSA-ключ необходимо:</span>
+	<ol style="margin: 0 0 0 2px;padding: 0;">
+		<li>Войти в личный кабинет организации на портале ЕГАИС <a rel="nofollow" href="http://egais.ru">egais.ru</a> с помощью полученного ранее сертификата КЭП.</li>
+		<li>Выбрать в боковом меню раздел «Получить ключ». На открывшейся странице можно просмотреть места осуществления деятельности вашей организации.</li>
+		<li>Выбрать из списка то место деятельности, для которого предназначен конкретный аппаратный ключ и нажать кнопку «Сформировать ключ». При этом на специальном носителе сформируется требуемый RSA-ключ.</li>
+	</ol>
+</div>
+
+<div class="ci-connection-order-block" id="#ci-hidden-4-desc">
+	<div class="ci-connection-order-number">3</div>
+	Получить на сайте egais.ru дистрибутив программы «Универсальный Транспортный Модуль» (УТМ)  и  ее описание <a class="toggle-head" id="ci-show-hidden-4" href="#ci-hidden-4-desc">Подробнее</a>
+</div>
+
+<div class="ci-connection-order-block-hidden" id="ci-show-hidden-4Info">
+	Данный программный модуль необходим для взаимодействия с ЕГАИС, он относится к программному обеспечению (ПО) ЕГАИС и распространяется бесплатно.
+
+	<div style="margin: 20px 0;"><span class="ci-bold-text">Для получения дистрибутива УТМ необходимо</span>:<br>
+		<ol style="margin: 0 0 0 2px;padding: 0;">
+			<li>Зайти в ваш личный кабинет на сайте egais.ru и перейти в  раздел «Транспортный модуль»".</li>
+			<li>Получить дистрибутив ПО УТМ по соответствующей ссылке и установить его на выделенный компьютер</li>
+		</ol>
+	</div>
+
+	<span class="ci-bold-text">После получения дистрибутива вы сможете выполнить установку и настройку УТМ, настроить информационное взаимодействие между используемым учетным решением и УТМ. Если ранее вы не использовали каких-либо учетных решений или они устарели, необходимо определиться с выбором соответствующего ПО, которое позволит вам выполнить требования Федерального закона № 171-ФЗ, вступающие в силу с 01 января 2016. Например, приобрести программу <a href="https://egais.center-inform.ru/egais/retail-declaration.php">Retail Declaration</a>.</span>
+	
+	<div style="margin-top: 20px;"><a href="https://egais.center-inform.ru/egais/utm.php">Подробнее об УТМ для ЕГАИС</a></div>
+</div>
+
+<h2 class="ci-headers">Дополнительно для розничных магазинов</h2>
+
+<div class="ci-connection-order-block" id="#ci-hidden-5-desc">
+	<div class="ci-connection-order-number">4</div>
+	Обратиться к поставщику вашего кассового ПО для приведения его в соответствие «Техническим требованиям» модуля УТМ 
+	<a class="toggle-head" id="ci-show-hidden-5" href="#ci-hidden-5-desc">Подробнее</a>
+</div>
+
+<div class="ci-connection-order-block-hidden" id="ci-show-hidden-5Info">
+	Магазинам, осуществляющим розничную продажу алкогольной продукции, в срок до 1 июля 2016 года также, необходимо обратиться к поставщику используемого кассового программного обеспечения, чтобы привести его в соответствие техническим требованиям. Это необходимо для корректной работы в системе ЕГАИС и взаимодействия кассового ПО с Универсальным транспортным модулем. Ознакомиться с актуальной версией «Требований» можно в Вашем личном кабинете на сайте <a rel="nofollow" href="http://egais.ru">egais.ru</a> в разделе «Получить ключ».
+</div>
+
+<div class="horizontal-line" style="margin-top:30px;"></div>
+
+<h2 class="ci-headers">Технические требования для подключения к ЕГАИС</h2>
+
+<p>Требования к оборудованию и сетевому подключению описаны на странице <a href="/egais/trebovaniya.php">требования ЕГАИС</a>.</p>
+
+<div class="horizontal-line"></div>
+
+<h2 class="ci-headers">Кто должен приобрести комплект технических средств для ЕГАИС?<br> 
+Количество комплектов и место использования технических средств.</h2>
+
+<p>Комплект технических средств - это: ПК с установленным УТМ модулем и специальным носителем с записанными на него сертификатом КЭП для ЕГАИС и ключом RSA.</p>
+
+<table class="ci-table">
+	<thead>
+		<tr>
+			<th>Кто приобретает технические средства?</th>
+			<th>В каком количестве закупаются технические средства?</th>
+			<th>Где размещаются технические средства?</th>
+		</tr>
+	</thead>
+	
+	<tbody>	
+		<tr>
+			<td class="ci-bold-text">
+				Юридические лица (ЮЛ), а именно:
+				<ul class="ci-list-universal">
+					<li>
+						оптовые склады, розничные магазины или предприятия общественного питания, реализующие маркированную алкогольную продукцию;
+					</li>
+					<li>
+						магазины, осуществляющие продажу только пива.
+					</li>
+				</ul>
+			</td>
+			
+			<td>
+				Технические средства приобретаются <span class="ci-very-important-text">на каждое обособленное подразделение ЮЛ</span>, имеющее уникальную связку ИНН-КПП. В каждом таком подразделении должен использоваться <span class="ci-very-important-text">свой отдельный комплект</span> технических средств.
+			</td>
+			
+			<td>
+				<p>Данные технические средства должны использоваться <span class="ci-very-important-text">по месту осуществления деятельности, указанному в лицензии</span> на оптовую или розничную торговлю алкогольной продукции.</p>
+				<p>Для организаций, осуществляющих продажу только пива, технические средства размещаются <span class="ci-very-important-text">по адресу регистрации обособленного подразделения ЮЛ</span>, осуществляющего продажу пива.</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="ci-bold-text">
+				Индивидуальные предприниматели (ИП), осуществляющие розничную продажу пива и пивных напитков
+			</td>
+			
+			<td>
+				Для ИП, торгующих пивом в розницу,  необходим только <span class="ci-very-important-text">один комплект</span> технических средств.
+			</td>
+			
+			<td>
+				Комплект технических средств может быть установлен <span class="ci-very-important-text">по любому адресу</span> осуществления деятельности данного ИП.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="margin-bottom:30px;"><a href="https://egais.center-inform.ru/egais/pamyatka.php">Памятка организации</a></div>
+
+ </div>	</div>
+</main>
+
+<div id="page-bottom-dialog">
+	Вы определились с выбором?<br>	
+		
+	<a id="page-bottom-dialog-button" class="ci-filled-button" href="/egais/order.php">Перейти к оформлению заказа</a>
+</div>
+
+<div id="footer-top-line" class="horizontal-line"></div>
+
+	<footer>
+		<nav id="footer-links" class="rubber-width">
+			<div class="footer-collumn">
+				<img src="/local/templates/torgi2016/images/header-ci-logo.png" id="footer-logo" alt="АО ЦентрИнформ">
+			</div>
+							<div class="footer-collumn">
+					<div class="footer-collumn-links">
+						<a href="/egais/how-to-connect/">Порядок заказа</a><br>
+						<a href="/news/">Новости</a><br>
+						<a href="/contacts/">Контакты</a>
+					</div>
+				</div>
+				
+				<div class="footer-collumn">
+					<div class="footer-collumn-links">
+						<strong>Другие проекты:</strong><br>
+													<a href="https://7405405.ru/">Электронная отчетность</a><br>
+													<a href="https://torgi.center-inform.ru/">Электронные подписи</a><br>
+													<a href="https://markirovka.center-inform.ru">Маркировка товаров</a>
+											</div>
+				</div>
+							<div class="footer-collumn">
+				<div class="footer-collumn-links">
+					(812) 7-405-405<br>
+					Адрес центрального офиса:<br>
+					Санкт-Петербург, ул.&nbsp;Комсомола&nbsp;1&#8288;-&#8288;3,&nbsp;лит.&nbsp;АС<br>
+					Сайт предприятия: <a target="_blank" rel="nofollow" href="https://center-inform.ru/" id="main-site-link">center-inform.ru</a><br>
+					<a target="_blank" rel="nofollow" href="https://center-inform.ru/personal-data/">Политика обработки персональных данных АО "ЦентрИнформ"</a>
+				</div>
+			</div>
+		</nav>
+	</footer>
+
+<div id="chat-body">
+	<div id="chat-area">
+		<div id="chat-label">Мы онлайн, напишите нам</div>
+		<div id="chat-circle" class="btn btn-raised">
+			<img src="/local/components/custom/ml.chat/templates/.default/round-help-button.svg" alt="Открыть" width="35">
+		</div>
+	</div>
+	
+	<div class="chat-box">
+		<div class="chat-box-header">
+			<div class="chat-header-text">
+				Служба поддержки<br>
+				<div class="chat-header-second-text">Напишите нам, мы онлайн</div>
+			</div>
+			<div class="chat-header-actions">
+				<span class="chat-box-toggle material-icons"><img src="/local/components/custom/ml.chat/templates/.default/close-button.svg" alt="Закрыть" width="25"></span>
+			</div>
+		</div>
+		<div class="chat-box-body">
+			<div class="chat-box-overlay">
+			</div>
+			<div class="chat-logs">
+			
+			</div><!--chat-log -->
+		</div>
+		<div class="chat-input">
+			<form id="chat-form">
+				<div class="input-area">
+					<textarea id="chat-input" placeholder="Введите Ваш вопрос..."></textarea>
+					<button type="submit" class="chat-submit" id="chat-submit"><span class="material-icons"><img src="/local/components/custom/ml.chat/templates/.default/send-message.svg" alt="Отправить" width="25"></span></button>
+				</div>
+				
+				<div class="actions-area">
+					<div>
+						<label for="chat-file" class="file-label">
+							<img src="/local/components/custom/ml.chat/templates/.default/clip.svg" alt="Прикрепить файл" width="24">
+						</label>
+						<input id="chat-file" name="files[]" type="file" multiple hidden accept=".png, .jpeg, .jpg, .pdf">
+					</div>
+					
+					<div>
+						<span class="file-description"></span>
+					</div>
+				</div>
+				
+				<input type="hidden" name="action" value="message">
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" >
+	(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	
+	ym(11241199, "init", {
+		clickmap:true,
+		trackLinks:true,
+		accurateTrackBounce:true,
+		webvisor:true
+	});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/11241199" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-11368254-5"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	 gtag('config', 'UA-11368254-5');
+</script>
+<script>
+	$(document).ready(function(){
+		$('.side-menu-banner').on('click', function(){
+			ym(11241199, 'reachGoal', 'menu_banner_click');
+		});
+	});
+</script>
+
+</body>
+</html>
